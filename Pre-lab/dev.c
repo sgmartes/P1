@@ -2,7 +2,7 @@
 #include<math.h>
 #define TAM_MAX 4
 float promedi( float lista[], size_t tam){
-    float suma=0;
+    float suma=0;//Ultimo cambio
     for (int i=0;i<TAM_MAX;++i){
         suma+=lista[i];
     }
