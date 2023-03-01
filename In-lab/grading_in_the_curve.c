@@ -43,17 +43,20 @@ void calif_a_letra(float lista[],size_t tam, float promedio, float sigma, char s
             salida[i]='A';
         }
     }
-    for (int i=0;i<tam;++i){
-        printf("%c\n",salida[i]);
-    }
-    printf("\n");
 }
 int main(){
     float list[TAM_MAX]={10,10,10,9};
     char salida[TAM_MAX]={0};
     float prome=promedio(list,TAM_MAX);
     float dest=desv_est(list,TAM_MAX,prome);
+    calif_a_letra(list,TAM_MAX,prome,dest,salida);
+
+    //Estos printf son solo para probar que el programa funciona.
+    //No incluírlos en la HdT <3
     printf("Promedio = %.02f\n",prome);
     printf("D. estándar = %.02f\n\n",dest);
-    calif_a_letra(list,TAM_MAX,prome,dest,salida);
+    for (int i=0;i<TAM_MAX;++i){
+        printf("%c\n",salida[i]);
+    }
+    printf("\n");
 }
