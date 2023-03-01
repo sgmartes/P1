@@ -3,7 +3,7 @@
 #define TAM_MAX 1000
 #define CANT_PRIMOS 30
 void primos_criba(int n, int primos[]){
-    int indice=2;
+    int indice=2; //Empezamos a buscar primos desde el 2, ya que ni el 0 ni el 1 son primos.
     int lista[TAM_MAX]={[0 ... 999]=1};//Se inicializan todos los elementos a 1
     
     for (indice;indice<=n;++indice){//Se pasan a cero los elementos cuyo índice no sea primo
